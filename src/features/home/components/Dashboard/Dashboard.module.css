@@ -3,22 +3,24 @@
   display: flex;
   flex-direction: column;
   background-color: var(--app-background);
-  width: 100%;
-  height: 100%;
+  min-height: 100%;
+  padding-top: calc(var(--app-bar-height) + var(--tg-safe-area-top));
+  padding-bottom: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom));
   animation: fadeIn var(--animation-duration-normal) var(--animation-easing);
+  z-index: 1;
+  box-sizing: border-box;
 }
 
 .content {
   flex: 1;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--app-background);
   position: relative;
-  margin-top: var(--header-height);
-  margin-bottom: var(--tab-bar-height);
   transition: background-color var(--animation-duration-normal) var(--animation-easing);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
 }
 
 /* Hide scrollbar for WebKit browsers */
@@ -28,7 +30,7 @@
 
 .tabBarTest {
   display: flex;
-  background-color: #07ec1a;
+  background-color: var(--nav-background);
   border-top: var(--border-width) solid var(--nav-border);
   position: fixed;
   bottom: 0;
@@ -38,4 +40,6 @@
   height: var(--tab-bar-height);
   z-index: 2;
   box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
