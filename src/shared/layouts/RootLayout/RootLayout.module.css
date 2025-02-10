@@ -23,7 +23,7 @@
   margin: 0;
   padding: var(--spacing-md);
   padding-top: var(--tg-safe-area-top);
-  /* padding-bottom: var(--tg-safe-area-bottom); */
+  padding-bottom: var(--tg-safe-area-bottom);
   padding-left: max(var(--spacing-md), var(--tg-safe-area-left));
   padding-right: max(var(--spacing-md), var(--tg-safe-area-right));
   box-sizing: border-box;
@@ -49,7 +49,7 @@
   .main {
     padding: var(--spacing-sm);
     padding-top: var(--tg-safe-area-top);
-    /* padding-bottom: var(--tg-safe-area-bottom); */
+    padding-bottom: var(--tg-safe-area-bottom);
     padding-left: max(var(--spacing-sm), var(--tg-safe-area-left));
     padding-right: max(var(--spacing-sm), var(--tg-safe-area-right));
   }
