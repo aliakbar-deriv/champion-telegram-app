@@ -58,11 +58,14 @@ const Dashboard = () => {
       <div className={styles.content}>
         {tabContent}
       </div>
-      <TabBar
+      <div className={styles.tabBarTest}>
+
+      </div>
+      {/* <TabBar
         items={TAB_ITEMS}
         activeTab={activeTab}
         onTabChange={setActiveTab}
-      />
+      /> */}
     </div>
   );
 };

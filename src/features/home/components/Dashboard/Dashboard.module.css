@@ -25,3 +25,17 @@
 .content::-webkit-scrollbar {
   display: none;
 }
+
+.tabBarTest {
+  display: flex;
+  background-color: #07ec1a;
+  border-top: var(--border-width) solid var(--nav-border);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--tab-bar-height);
+  z-index: 1000;
+  box-sizing: border-box;
+}
