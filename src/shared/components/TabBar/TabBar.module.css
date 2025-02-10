@@ -7,23 +7,11 @@
   left: 0;
   right: 0;
   width: 100%;
-  height: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom));
+  height: var(--tab-bar-height);
   z-index: 1000;
   box-sizing: border-box;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-}
-
-/* Container for buttons */
-.tabBar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: var(--tg-safe-area-left);
-  right: var(--tg-safe-area-right);
-  height: var(--tab-bar-height);
-  background-color: var(--nav-background);
-  z-index: 0;
 }
 
 .tabButton {
@@ -33,7 +21,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--spacing-xs);
-  height: var(--tab-bar-height);
+  height: 100%;
   min-width: var(--touch-target-size);
   margin: 0;
   position: relative;
