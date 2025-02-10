@@ -24,7 +24,7 @@
   inset: 0;
   z-index: var(--z-index-root);
   transition: background-color var(--animation-duration-normal) var(--animation-easing),
-              color var(--animation-duration-normal) var(--animation-easing);
+    color var(--animation-duration-normal) var(--animation-easing);
 }
 
 .main {
@@ -37,14 +37,13 @@
   background-color: var(--app-background);
   position: relative;
   z-index: var(--z-index-main);
-  
   /* Base padding with safe area considerations */
   padding: var(--spacing-md);
-  padding-top: calc(var(--spacing-md) + var(--tg-safe-area-top, 0px));
-  padding-bottom: calc(var(--spacing-md) + var(--tg-safe-area-bottom, 0px));
-  padding-left: calc(var(--spacing-md) + var(--tg-safe-area-left, 0px));
-  padding-right: calc(var(--spacing-md) + var(--tg-safe-area-right, 0px));
-  
+  padding-top: var(--tg-safe-area-top, 0px);
+  padding-bottom: var(--tg-safe-area-bottom, 0px);
+  padding-left: var(--tg-safe-area-left, 0px);
+  padding-right: var(--tg-safe-area-right, 0px);
+
   /* Scrolling behavior */
   overflow-y: auto;
   overflow-x: hidden;
@@ -52,7 +51,7 @@
   overscroll-behavior-y: none;
   touch-action: pan-x pan-y;
   scroll-behavior: smooth;
-  
+
   /* Hide scrollbar */
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -63,10 +62,10 @@
   .main {
     /* Smaller padding for mobile but maintain safe areas */
     padding: var(--spacing-sm);
-    padding-top: calc(var(--spacing-sm) + var(--tg-safe-area-top, 0px));
-    padding-bottom: calc(var(--spacing-sm) + var(--tg-safe-area-bottom, 0px));
-    padding-left: calc(var(--spacing-sm) + var(--tg-safe-area-left, 0px));
-    padding-right: calc(var(--spacing-sm) + var(--tg-safe-area-right, 0px));
+    padding-top: var(--tg-safe-area-top, 0px);
+    padding-bottom: var(--tg-safe-area-bottom, 0px);
+    padding-left: var(--tg-safe-area-left, 0px);
+    padding-right: var(--tg-safe-area-right, 0px);
   }
 }
 
@@ -75,10 +74,10 @@
   .main {
     /* Medium padding for tablets with safe areas */
     padding: var(--spacing-md);
-    padding-top: calc(var(--spacing-md) + var(--tg-safe-area-top, 0px));
-    padding-bottom: calc(var(--spacing-md) + var(--tg-safe-area-bottom, 0px));
-    padding-left: calc(var(--spacing-md) + var(--tg-safe-area-left, 0px));
-    padding-right: calc(var(--spacing-md) + var(--tg-safe-area-right, 0px));
+    padding-top: var(--tg-safe-area-top, 0px);
+    padding-bottom: var(--tg-safe-area-bottom, 0px);
+    padding-left: var(--tg-safe-area-left, 0px);
+    padding-right: var(--tg-safe-area-right, 0px);
   }
 }
 
@@ -88,14 +87,14 @@
     min-height: 100vh;
     height: 100vh;
   }
-  
+
   .main {
     /* Maintain medium padding in landscape for better spacing */
     padding: var(--spacing-md);
-    padding-top: calc(var(--spacing-md) + var(--tg-safe-area-top, 0px));
-    padding-bottom: calc(var(--spacing-md) + var(--tg-safe-area-bottom, 0px));
-    padding-left: calc(var(--spacing-md) + var(--tg-safe-area-left, 0px));
-    padding-right: calc(var(--spacing-md) + var(--tg-safe-area-right, 0px));
+    padding-top: var(--tg-safe-area-top, 0px);
+    padding-bottom: var(--tg-safe-area-bottom, 0px);
+    padding-left: var(--tg-safe-area-left, 0px);
+    padding-right: var(--tg-safe-area-right, 0px);
   }
 }
 
@@ -118,6 +117,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -128,6 +128,7 @@
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;

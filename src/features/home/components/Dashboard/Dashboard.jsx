@@ -15,15 +15,15 @@ const TAB_ITEMS = [
     label: 'Trade'
   },
   {
+    id: 'positions',
+    icon: positionsIcon,
+    label: 'Positions'
+  },
+  {
     id: 'cashier',
     icon: cashierIcon,
     label: 'Cashier'
   },
-  {
-    id: 'positions',
-    icon: positionsIcon,
-    label: 'Positions'
-  }
 ];
 
 const Dashboard = () => {
@@ -34,10 +34,10 @@ const Dashboard = () => {
     switch (activeTab) {
       case 'trade':
         return <TradePage />;
-      case 'cashier':
-        return <CashierPage />;
       case 'positions':
         return <PositionsPage />;
+      case 'cashier':
+        return <CashierPage />;
       default:
         return null;
     }
@@ -58,14 +58,11 @@ const Dashboard = () => {
       <div className={styles.content}>
         {tabContent}
       </div>
-      <div className={styles.tabBarTest}>
-
-      </div>
-      {/* <TabBar
+      <TabBar
         items={TAB_ITEMS}
         activeTab={activeTab}
         onTabChange={setActiveTab}
-      /> */}
+      />
     </div>
   );
 };

@@ -1,10 +1,9 @@
 .container {
-  padding: var(--spacing-sm);
   width: 100%;
-  min-height: var(--tg-viewport-stable-height);
-  padding-bottom: var(--spacing-xl);
-  margin-bottom: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom, 0px) + var(--spacing-xl));
+  height: 100%;
   position: relative;
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--tab-bar-height);
 }
 
 .marketSelectorWrapper {
@@ -20,7 +19,7 @@
   justify-content: space-between;
 }
 
-.tradeParameters > * {
+.tradeParameters>* {
   min-width: 120px;
   width: calc(50% - var(--spacing-md) / 2);
 }
@@ -43,7 +42,7 @@
   right: 0;
   display: flex;
   gap: var(--spacing-md);
-  z-index: 100;
+  z-index: 2;
   background-color: var(--app-background);
   padding: var(--spacing-md);
   transform: translateZ(0);
