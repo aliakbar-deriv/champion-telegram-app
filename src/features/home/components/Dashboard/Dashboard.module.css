@@ -36,6 +36,6 @@
   right: 0;
   width: 100%;
   height: var(--tab-bar-height);
-  z-index: 1000;
+  z-index: 2;
   box-sizing: border-box;
 }
