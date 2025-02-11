@@ -3,11 +3,11 @@
   background-color: var(--nav-background);
   border-top: var(--border-width) solid var(--nav-border);
   position: fixed;
-  bottom: env(safe-area-inset-bottom, 0px);
+  bottom: var(--tg-safe-area-bottom, env(safe-area-inset-bottom, 0px));
   left: 0;
   right: 0;
   width: 100%;
-  height: calc(var(--tab-bar-height) + env(safe-area-inset-bottom, 0px));
+  height: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom, env(safe-area-inset-bottom, 0px)));
   z-index: 3;
   box-sizing: border-box;
   backdrop-filter: blur(10px);
@@ -33,8 +33,8 @@
   font-weight: var(--font-weight-medium);
   cursor: pointer;
   transition: color var(--animation-duration-normal) var(--animation-easing),
-              background-color var(--animation-duration-normal) var(--animation-easing),
-              transform var(--animation-duration-fast) var(--animation-easing);
+    background-color var(--animation-duration-normal) var(--animation-easing),
+    transform var(--animation-duration-fast) var(--animation-easing);
   outline: none;
   border-radius: var(--border-radius);
   user-select: none;
@@ -67,7 +67,7 @@
   height: 24px;
   margin-bottom: var(--spacing-xs);
   transition: opacity var(--animation-duration-normal) var(--animation-easing),
-              filter var(--animation-duration-normal) var(--animation-easing);
+    filter var(--animation-duration-normal) var(--animation-easing);
   opacity: 0.7;
   filter: brightness(0) saturate(100%);
 }
