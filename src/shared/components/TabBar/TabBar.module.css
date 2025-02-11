@@ -3,11 +3,11 @@
   background-color: var(--nav-background);
   border-top: var(--border-width) solid var(--nav-border);
   position: fixed;
-  bottom: 0;
+  bottom: env(safe-area-inset-bottom, 0px);
   left: 0;
   right: 0;
   width: 100%;
-  height: var(--tab-bar-height);
+  height: calc(var(--tab-bar-height) + env(safe-area-inset-bottom, 0px));
   z-index: 3;
   box-sizing: border-box;
   backdrop-filter: blur(10px);
@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--spacing-xs);
-  height: 100%;
+  height: var(--tab-bar-height);
   min-width: var(--touch-target-size);
   margin: 0;
   position: relative;
