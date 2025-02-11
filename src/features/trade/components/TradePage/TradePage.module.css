@@ -1,9 +1,7 @@
 .container {
   width: 100%;
   position: relative;
-  /* padding-bottom: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom, env(safe-area-inset-bottom, 0px)) + var(--touch-target-size) + (var(--spacing-md) * 2)); */
-  padding-bottom: 10rem;
-  margin-bottom: calc(var(--tab-bar-height) + env(safe-area-inset-bottom, 0px) + 120px);
+  padding-bottom: calc(var(--tab-bar-height) + var(--touch-target-size) + var(--spacing-md));
 }
 
 .marketSelectorWrapper {
@@ -42,8 +40,7 @@
   right: 0;
   display: flex;
   gap: var(--spacing-md);
-  z-index: 100;
+  z-index: 2;
   background-color: var(--app-background);
   padding: var(--spacing-md);
-  transform: translateZ(0);
 }
