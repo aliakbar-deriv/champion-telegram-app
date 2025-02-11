@@ -1,5 +1,5 @@
 .appBar {
-  height: var(--app-bar-height);
+  height: calc(var(--app-bar-height) + var(--tg-safe-area-top, env(safe-area-inset-top, 0px)));
   background-color: var(--nav-background-solid);
   display: flex;
   justify-content: space-between;

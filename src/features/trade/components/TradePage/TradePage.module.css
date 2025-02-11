@@ -1,9 +1,7 @@
 .container {
   width: 100%;
-  height: 100%;
   position: relative;
-  padding-bottom: var(--spacing-md);
-  margin-bottom: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom, env(safe-area-inset-bottom, 0px)) + var(--touch-target-size) + (var(--spacing-xl) * 2));
+  margin-bottom: calc(var(--touch-target-size) + (var(--spacing-xl) * 2));
 }
 
 .marketSelectorWrapper {
