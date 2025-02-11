@@ -37,7 +37,8 @@
   bottom: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom, env(safe-area-inset-bottom, 0px)) + var(--spacing-sm));
   left: 0;
   right: 0;
-  padding: var(--spacing-md);
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
   display: flex;
   gap: var(--spacing-md);
   z-index: 2;
