@@ -3,7 +3,7 @@
   /* height: 100%; */
   position: relative;
   padding-bottom: var(--spacing-md);
-  margin-bottom: var(--tab-bar-height);
+  margin-bottom: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom, 0px));
 }
 
 .marketSelectorWrapper {
