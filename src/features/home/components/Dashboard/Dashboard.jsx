@@ -1,12 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { Loading } from '@/shared/components';
 import styles from './Dashboard.module.css';
-import { tradeIcon, cashierIcon, positionsIcon } from '@/assets/images';
+import { tradeIcon, cashierIcon, positionsIcon, accountIcon } from '@/assets/images';
 import { TabBar, AppBar } from '@/shared/components';
 import { useAuth } from '@/hooks';
 import { TradePage } from '@/features/trade';
 import { CashierPage } from '@/features/cashier';
 import { PositionsPage } from '@/features/positions';
+import { AccountPage } from '@/features/account';
 
 const TAB_ITEMS = [
   {
@@ -24,6 +25,11 @@ const TAB_ITEMS = [
     icon: cashierIcon,
     label: 'Cashier'
   },
+  {
+    id: 'account',
+    icon: accountIcon,
+    label: 'Account'
+  },
 ];
 
 const Dashboard = () => {
@@ -38,6 +44,8 @@ const Dashboard = () => {
         return <PositionsPage />;
       case 'cashier':
         return <CashierPage />;
+      case 'account':
+        return <AccountPage />;
       default:
         return null;
     }
