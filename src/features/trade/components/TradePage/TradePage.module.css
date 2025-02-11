@@ -34,19 +34,18 @@
 
 .tradeButtonsContainer {
   position: fixed;
-  bottom: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom, env(safe-area-inset-bottom, 0px)) + var(--spacing-sm));
+  bottom: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom, env(safe-area-inset-bottom, 0px)));
   left: 0;
   right: 0;
-  padding-left: var(--spacing-md);
-  padding-right: var(--spacing-md);
+  margin: 0 var(--spacing-md);
   display: flex;
   gap: var(--spacing-md);
   z-index: 2;
   background-color: var(--app-background);
+  padding: var(--spacing-md);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: var(--border-width) solid var(--app-border);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-md);
-  transform: translateZ(0);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
 }
