@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
   padding-bottom: var(--spacing-md);
-  margin-bottom: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom, 0px));
+  margin-bottom: calc(var(--tab-bar-height) + env(safe-area-inset-bottom, 0px));
 }
 
 .marketSelectorWrapper {
@@ -36,7 +36,7 @@
 
 .tradeButtonsContainer {
   position: fixed;
-  bottom: calc(var(--tab-bar-height) + var(--tg-safe-area-bottom, 0px));
+  bottom: calc(var(--tab-bar-height) + env(safe-area-inset-bottom, 0px));
   left: 0;
   right: 0;
   display: flex;
